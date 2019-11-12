@@ -1,0 +1,9 @@
+install.packages("circlize")
+library(circlize)
+
+airplanes <- matrix(flights$V1, nrow = 6, ncol = 6, byrow = TRUE,
+          dimnames = list(c("ATL", "DEN", "DFW", "JFK(NYC)", "LAX", "ORD(CHI)"),
+          c("ATL", "DEN", "DFW", "JFK(NYC)", "LAX", "ORD(CHI)")))
+airplanes
+
+chordDiagram(airplanes)
